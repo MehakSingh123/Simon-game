@@ -11,13 +11,11 @@ body {
 }
 
 .btn {
-    width: 200px;
-    height: 200px;
+    width: 200px; /* Fixed width */
+    height: 200px; /* Fixed height */
     border: 10px solid black;
     border-radius: 20%;
     margin: 1rem; /* Adjust margin for spacing between buttons */
-    flex: 1; /* Allow buttons to grow and shrink based on available space */
-    box-sizing: border-box; /* Include border in width calculation */
 }
 
 .red {
@@ -43,12 +41,16 @@ body {
 /* Media Queries for Responsive Design */
 @media (max-width: 600px) {
     .btn {
-        width: calc(50% - 2rem); /* Two buttons per row on smaller screens */
+        width: 80px; /* Two buttons per row on smaller screens */
+    
+        height: 80px; /* Maintain the same height */
     }
+
 }
 
 @media (max-width: 400px) {
     .btn {
-        width: calc(100% - 2rem); /* Single button per row on even smaller screens */
+        width: 80px; /* Single button per row on even smaller screens */
+        height: 80px; /* Maintain the same height */
     }
 }
